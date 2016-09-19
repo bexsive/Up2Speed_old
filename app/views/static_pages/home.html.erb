@@ -4,6 +4,9 @@
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+      </section>
       <section class="micropost_form">
         <%= render 'shared/micropost_form' %>
       </section>
@@ -14,18 +17,33 @@
     </div>
   </div>
 <% else %>
-<div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
 
-  <h2>
-    This is the home page for the
-    <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<% provide(:home, "active") %>
+<% provide(:title, "Home") %>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Welcome to Up 2 Speed!</h1>
+    <center> <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %></center>
+  </div>
 </div>
 
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Heading</h2>
+      <p>Lorem ipsum dolor sit amet, pede occaecat adipiscing, nunc id dui dapibus velit, eros mattis condimentum, ac pharetra duis a elementum nulla, dictum elit nam semper suspendisse sollicitudin. Justo arcu enim. Lacinia nulla mi enim wisi nibh, enim tellus enim reiciendis vel praesent. Nascetur ac, ut pellentesque justo metus felis consequatur hac, urna viverra eu cursus quam quis, non id fusce quam in, blandit lectus etiam dapibus ultrices. Sem dictum aliquet gravida ut commodo nostra, nulla fusce ut, rutrum suscipit eu, eu quam nisl quisque elit felis, praesent malesuada vitae nunc. Amet vitae netus tortor molestiae eros, scelerisque placerat sociis convallis lectus, magna mi, nunc sollicitudin massa lacinia fusce ut.
+      <a class="btn btn-default" href="#" role="button">View Details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Heading</h2>
+      <p>Lorem ipsum dolor sit amet, pede occaecat adipiscing, nunc id dui dapibus velit, eros mattis condimentum, ac pharetra duis a elementum nulla, dictum elit nam semper suspendisse sollicitudin. Justo arcu enim. Lacinia nulla mi enim wisi nibh, enim tellus enim reiciendis vel praesent. Nascetur ac, ut pellentesque justo metus felis consequatur hac, urna viverra eu cursus quam quis, non id fusce quam in, blandit lectus etiam dapibus ultrices. Sem dictum aliquet gravida ut commodo nostra, nulla fusce ut, rutrum suscipit eu, eu quam nisl quisque elit felis, praesent malesuada vitae nunc. Amet vitae netus tortor molestiae eros, scelerisque placerat sociis convallis lectus, magna mi, nunc sollicitudin massa lacinia fusce ut.
+      <a class="btn btn-default" href="#" role="button">View Details &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Heading</h2>
+      <p>Lorem ipsum dolor sit amet, pede occaecat adipiscing, nunc id dui dapibus velit, eros mattis condimentum, ac pharetra duis a elementum nulla, dictum elit nam semper suspendisse sollicitudin. Justo arcu enim. Lacinia nulla mi enim wisi nibh, enim tellus enim reiciendis vel praesent. Nascetur ac, ut pellentesque justo metus felis consequatur hac, urna viverra eu cursus quam quis, non id fusce quam in, blandit lectus etiam dapibus ultrices. Sem dictum aliquet gravida ut commodo nostra, nulla fusce ut, rutrum suscipit eu, eu quam nisl quisque elit felis, praesent malesuada vitae nunc. Amet vitae netus tortor molestiae eros, scelerisque placerat sociis convallis lectus, magna mi, nunc sollicitudin massa lacinia fusce ut.
+      <a class="btn btn-default" href="#" role="button">View Details &raquo;</a></p>
+    </div>
+  </div>
+</div>
 <% end %>
